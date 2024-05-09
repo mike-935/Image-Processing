@@ -1,0 +1,18 @@
+load src/Koala.ppm koala-0
+brighten 50 koala-0 koala-1
+vertical-flip koala-1 koala-2
+horizontal-flip koala-2 koala-3
+value-component koala-3 koala-4
+save res/Koala.ppm koala-4
+load res/city.png city
+blur city city-blur
+sharpen city city-sharp
+sepia city city-sepia
+greyscale city city-greyscale
+red-component city city-red
+blue-component city city-blue
+green-component city city-green
+darken 50 city city-dark
+luma-component city city-luma
+intensity-component city city-intensity
+save res/city-blur.png city-blur

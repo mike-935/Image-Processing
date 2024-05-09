@@ -1,0 +1,96 @@
+To the run the program:
+- with a script: invoke the program by using the command line to type in "java -jar ImageProcessing.jar -file path-of-script-file" where "path-of-script-file" is the file path of the script to be run.
+- in interactive text mode: invoke the program by using the command line to type in "java -jar ImageProcessing.jar -text"
+- with a GUI: invoke the program by using the command line to type in "java -jar ImageProcessing.jar" with no command line arguments, or double click on the ImageProcessing.jar file.
+
+If the program is running in text mode, or being given a script:
+The available commands are:
+
+load <filepath> <name>
+this imports the image at the file path, and refers to it henceforth in the program by the name specified after.
+Ex. load res/city.png city
+This will load the Koala ppm image and store it in the program as Koala-0 which is the name to be used if this specific image is to be used
+
+red-component <name> <new name>
+This command will get the red channel of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. red-component city city-red
+This would get the red channel of whatever city refers to, city being an image that has been loaded with the load command and now referred to as city, and this red channel image will now be referred to as city-red
+
+green-component <name> <new name>
+This command will get the green channel of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. green-component city city-green
+This would take in the image referred to as city in the program, green channel it and then refer to it henceforth as city-green.
+
+blue-component <name> <new name>
+This command will get the blue channel of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. blue-component city city-blue
+This would take in the stored image under the name of city, perform the blue channel operation on it and then refer to it henceforth in the program as city-blue.
+
+value-component <name> <new name>
+This command will get the value component of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. value-component koala-3 koala-4
+This would get the value component of koala-3 and store the image created from it in the program as koala-4.
+
+intensity-component <name> <new name>
+This command will get the intensity component of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. intensity-component city city-intensity
+This example shows an image referred to as city in the program having the intensity component operation performed and storing the result inmage as city-intensity.
+
+luma-component <name> <new name>
+This command will get the intensity component of an image using the first name input and refer to it henceforth in the program by the new name input the comes second.
+Ex. luma-component city city-luma
+This would get the luma component of city and store the image created from it in the program as city-luma.
+
+horizontal-flip <name> <new name>
+This command will flip an image horizontally that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. horizontal-flip koala-2 koala-3
+This will flip the image known as koala-2 in the program horizontally, and it will be stored for later reference in it as koala-3.
+
+vertical-flip <name> <new name>
+This command will flip an image horizontally that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. vertical-flip koala-1 koala-2
+This will flip the image known as koala-1 in the program vertically, and it will be stored for later reference in it as koala-2.
+
+brighten <number> <name> <new name>
+This command will brighten an image by the given amount that is referred to under the name input and refer to it henceforth in the program as the new name.
+Ex. brighten 50 koala-0 koala-1
+This will brighten the image stored as koala-0 by 50 and save it for further use by the name of koala-1.
+
+darken <number> <name> <new name>
+This command will darken an image by the given amount that is referred to under the name input and refer to it henceforth in the program as the new name.
+Ex. darken 50 city city-dark
+This will darken the image stored as city by 50 and save it for further use by the name of city-dark.
+
+blur <name> <new name>
+This command will blur an image that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. blur city city-blur
+This would blur the image referred to as city and store the image created from it in the program as city-blur.
+
+sharpen <name> <new name>
+This command will sharpen an image that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. sharp city city-sharp
+This would sharpen the image referred to as city and store the image created from it in the program as city-sharpen.
+
+greyscale <name> <new name>
+This command produced a greyscale image that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. greyscale city city-greyscale
+This would produce a greyscale image from the image stored as city and store the new image as city-greyscale.
+
+sepia <name> <new name>
+This command produced a sepia image that is stored under the first name input and refer to it henceforth in the program by the second input.
+Ex. sepia city city-sepia
+This would produce a sepia image from the image stored as city and store the new image as city-greyscale.
+
+save <destination> <name>
+the <destination> is the filepath, you can also specify file type here (ppm, png, jpg, bmp, gif), and <name> is the name you've been referring to the image as in the program.
+Ex. save res/city-blur.png city-blur
+This would save the image stored in the program under city-blur to the destination path of res/city-blur.png.
+
+If the program is run with a GUI:
+- At the top of the program is the image being worked on.
+- Below it is a histogram displaying the red, green, and blue components, as well as the value component of the image.
+- Both the image and the histogram update after any operation, or selecting a different image to work on. 
+- All of the above operations are available in the form of buttons in the bottom left of the GUI. 
+- When performing an operation, the program will automatically duplicate and rename the image being worked on and store it as "name-operation" where name is its current name, and operation is a shorthand for the name of the operation being performed. 
+- Ex. clicking the "red-component" button while operating on an image called Koala would create a new image called Koala-red that is accessible from the bottom-right list
+- In the bottom right is the list of all the images that are created in the program. The user can click on the image that they want to process, and it will update the image and the histogram being shown in the GUI.
